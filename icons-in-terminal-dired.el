@@ -127,7 +127,7 @@
 (define-minor-mode icons-in-terminal-dired-mode
   "Display icons-in-terminal icon for each files in a dired buffer."
   :lighter " icons-in-terminal-dired-mode"
-  (when (and (derived-mode-p 'dired-mode) (display-graphic-p))
+  (when (derived-mode-p 'dired-mode)
     (if icons-in-terminal-dired-mode
         (icons-in-terminal-dired--setup)
       (icons-in-terminal-dired--teardown))))
